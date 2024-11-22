@@ -1,0 +1,35 @@
+/* body{
+    display: flex;
+    justify-content: center;
+    /* align-items: center;
+} */
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h3{
+    font-size: 3em;
+}
+.box{
+    width: 430px;
+    height: 130px;
+    background-color: aquamarine;
+    font-family: sans-serif;
+    border: 1px solid black;
+}
+#timeHMS{
+    font-size: 50px;
+    margin: 0 5px;
+}
+#date{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
