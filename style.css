@@ -1,35 +1,81 @@
-/* body{
-    display: flex;
-    justify-content: center;
-    /* align-items: center;
-} */
-*,
-*::before,
-*::after{
-    box-sizing: border-box;
-}
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-h3{
-    font-size: 3em;
+    box-sizing: border-box;    
 }
 .box{
-    width: 430px;
-    height: 130px;
-    background-color: aquamarine;
-    font-family: sans-serif;
-    border: 1px solid black;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg ,#edf6fc, #007bff);
+    color: white;
+    position: relative;
 }
-#timeHMS{
-    font-size: 50px;
-    margin: 0 5px;
+.container{
+    width: 880px;
+    height: 180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* background: red; */
 }
-#date{
-    font-size: 25px;
+.Time{
+    width: 100%;
+    height: 100%;
+    background: rgba(53, 1, 58, 0.925);
+    border-radius: 10px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    /* backdrop-filter: blur(30px); */
 }
+
+.Time span{
+    font-size: 80px;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+.Time span::after{
+    font-size: 14px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%);
+}
+#hrs::after{
+    content: 'HOURS';
+}
+#min::after{
+    content: 'MIN';
+}
+#sec::after{
+    content: 'SEC';
+}
+/* #dateToday::after{
+    content: 'DATE';
+} */
+/* .date{
+    width: 100%;
+    height: 100%;
+    background: rgba(53, 1, 58, 0.925);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.date span{
+    font-size: 80px;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+.date span::after{
+    font-size: 14px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%);
+} */

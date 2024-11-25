@@ -1,29 +1,15 @@
-const timeHMS = document.getElementById("timeHMS");
-const dateToday = document.getElementById("date");
+const hrs = document.getElementById("hrs");
+const min = document.getElementById("min");
+const sec = document.getElementById("sec");
+// const dateToday = document.getElementById("dateToday")
 
 function displayTime(){
     const date = new Date();
-    let ap;
 
-    year = date.getFullYear();
-    month = date.getMonth();
-    day = date.getDate();
-
-    dateToday.textContent = `${month} / ${day} / ${year}`;
-
-    hour = date.getHours();
-    min = date.getMinutes();
-    sec = date.getSeconds();
-
-    if(hour>12){
-        ap = 'PM';
-    }
-    else{
-        ap = 'AM';
-    }
-    hour = hour < 12 ? hour : hour-12;
-    
-    timeHMS.textContent = `${hour} : ${min} : ${sec} ${ap}`;
+    hrs.textContent = date.getHours();
+    min.textContent = date.getMinutes();
+    sec.textContent = date.getSeconds();
+    // dateToday.textContent = String(date.getFullYear()) + '/' + String(date.getMonth()) + '/' + String(date.getDate());
 }
 
 setInterval(displayTime, 1000);
